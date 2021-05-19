@@ -18,9 +18,16 @@ app.set('view engine', 'handlebars');
 // Routes
 // =============================================================
 app.get('/', (req, res) => {
-
     res.render('index');
-  });
+});
+
+app.get('/search', (req, res) => {
+    res.render('index');
+});
+
+app.get('/team', (req, res) => {
+    res.render('index');
+});
 
 // Starts the server to begin listening
 // =============================================================
