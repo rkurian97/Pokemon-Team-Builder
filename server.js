@@ -13,3 +13,18 @@ const PORT = process.env.PORT || 3001;
 // Sets Handlebars as the default template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
+
+
+// Routes
+// =============================================================
+app.get('/', (req, res) => {
+
+    res.render('index');
+  });
+
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, () => {
+    console.log('App listening on PORT ' + PORT);
+  });
+  
