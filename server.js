@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 3001;
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-
 // Routes
 // =============================================================
 app.get('/', (req, res) => {
@@ -22,16 +21,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/search', (req, res) => {
-    res.render('index');
+    res.render('search');
 });
 
 app.get('/team', (req, res) => {
-    res.render('index');
+    res.render('team');
 });
 
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, () => {
     console.log('App listening on PORT ' + PORT);
-  });
-  
+});
