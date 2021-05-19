@@ -1,0 +1,37 @@
+<script>
+    teamData = [];
+
+fetch("https://pokeapi.co/api/v2/pokemon/charmander/")
+    .then(response => response.json())
+    .then(function (data) {
+        teamData.push(data);
+    });
+
+fetch("https://pokeapi.co/api/v2/pokemon/ditto/")
+    .then(response => response.json())
+    .then(function (data) {
+        teamData.push(data);
+    });
+
+fetch("https://pokeapi.co/api/v2/pokemon/lapras/")
+    .then(response => response.json())
+    .then(function (data) {
+        teamData.push(data);
+    });
+fetch("https://pokeapi.co/api/v2/pokemon/lugia/")
+    .then(response => response.json())
+    .then(function (data) {
+        teamData.push(data);
+    });
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu/")
+    .then(response => response.json())
+    .then(function (data) {
+        teamData.push(data);
+    });
+fetch("https://pokeapi.co/api/v2/pokemon/squirtle/")
+    .then(response => response.json())
+    .then(function (data) {
+        teamData.push(data);
+    });
+console.log(teamData);
+</script>
