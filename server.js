@@ -38,6 +38,11 @@ app.get("/team", (req, res) => {
   res.render("team");
 });
 
+//render sign up handlebars
+app.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, () => {
