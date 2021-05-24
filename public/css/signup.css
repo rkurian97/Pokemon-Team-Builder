@@ -1,0 +1,32 @@
+.container {
+  background: rgba(248, 248, 111, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-group {
+  font-size: 16px;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.btn-align {
+  text-align: center;
+}
+
+.btn-primary {
+  width: 200px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+label {
+  font-weight: 500;
+}
