@@ -1,13 +1,37 @@
 <div class="container">
-    <h1>Pokeman Characters</h1>
-    <div id="searchWrapper" class="primary">
-        <input
-        type="text"
-        name="searchBar"
-        id="search for a character" />
+    <h1>Search Pokemon: </h1>
+    <div>
+        <div id="search-pokemon">
+                <input id="search" class="searchInput" placeholder="ex. Charmander" /> 
+                <button id="submit"> Search</button>
+                </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" alt="Card image cap">
+            <div class="card-body">
+               <section>
+                   <div>
+                       <p>Fire/Flying</p>
+                       <p>Type</p>
+                   </div>
+                   <div>
+                       <p>0kg</p>
+                       <p>Weight</p>
+                   </div>
+                   <div>
+                       <p>0.17m</p>
+                       <p>Height</p>
+                   </div>
+               </section>
+            </div>
+        </div>
+        </div>         
     </div>
-    <ul id="charactersList"></ul>
 </div>
- 
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="api/pokemon.js"></script>
  
   
