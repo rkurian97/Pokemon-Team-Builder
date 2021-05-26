@@ -1,10 +1,10 @@
-const Users = require('./Users');
-const Pokemon = require('./Pokemon');
+// const Users = require('./Users');
+// const Pokemon = require('./Pokemon');
 
-Pokemon.belongsTo(Users, {
-    foreignKey: "userid"
-});
+// Pokemon.belongsTo(Users, {
+//     foreignKey: "userid"
+// });
 
-Users.hasMany(Pokemon);
+// Users.hasMany(Pokemon);
 
-module.exports = { Users, Pokemon};
+// module.exports = { Users, Pokemon};

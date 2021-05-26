@@ -15,6 +15,7 @@ const { userInfo } = require("os");
 const sequelize = require('./config/connection');
 const Users = require('./models/Users');
 const isAuthenticated = require("./config/middleware/isAuthenticated");
+require('./config/passport-config')(passport);
 
 // const initializePassport= require(".config/passport-config")
 // initializePassport(
@@ -61,7 +62,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/search", isAuthenticated,  (req, res) => {
-  res.render("search");
+  res.render("search", {email: req.user.email});
 });
 
 app.get("/team", isAuthenticated, (req, res) => {
@@ -78,6 +79,12 @@ app.post('/login', passport.authenticate('local', {
   failureRedirect: '/login',
   failureFlash: true
 }));
+
+//logout
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
 
 //register
 app.get("/register", (req, res) => {
@@ -100,6 +107,7 @@ app.post("/register", async (req, res) =>{
     });
 });
 
+// check if the user is logged in
 function checkAuthenticated(req, res, next){
   if (req.isAuthenticated()) {
     return next()
