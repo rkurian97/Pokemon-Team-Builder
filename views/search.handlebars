@@ -1,31 +1,40 @@
+<link rel="stylesheet" href="css/search.css">
 <div class="container">
-    <h1>Search Pokemon: </h1>
+    <h1>Search Pokémon </h1>
     <div>
         <div id="search-pokemon">
-                <input id="search" class="searchInput" placeholder="ex. Charmander" /> 
+            <input id="search" class="searchInput" placeholder="ex. Charmander" /> 
+            <div>
                 <button id="submit"> Search</button>
-                </div>
-
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" alt="Card image cap">
-            <div class="card-body">
-               <section>
-                   <div>
-                       <p>Fire/Flying</p>
-                       <p>Type</p>
-                   </div>
-                   <div>
-                       <p>0kg</p>
-                       <p>Weight</p>
-                   </div>
-                   <div>
-                       <p>0.17m</p>
-                       <p>Height</p>
-                   </div>
-               </section>
             </div>
         </div>
-        </div>         
+
+     <div id="card-container">
+            <div class="card">
+                <img class="card-img-top" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg" alt="Card image cap">
+                <div class="card-body">
+                    <section class="heading">
+                        <h1 class="main-heading">Name</h1>
+                        <p class="stats">HP 0 | XP 0</p>
+                    </section>
+                <section class="sub-heading">
+                    <div>
+                        <p class="description">Fire/Flying</p>
+                        <p class="title">Type</p>
+                    </div>
+                    <div class="div-border">
+                        <p class="description">0kg</p>
+                        <p class="title">Weight</p>
+                    </div>
+                    <div>
+                        <p class="description">0.17m</p>
+                        <p class="title">Height</p>
+                    </div>
+                </section>
+                </div>
+            </div>
+          </div>  
+     </div>       
     </div>
 </div>
 
