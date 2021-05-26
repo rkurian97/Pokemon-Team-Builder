@@ -40,6 +40,9 @@ function apiCall(pokemon) {
                  <p class="title">Height</p>
              </div>
          </section>
+         <div>
+             <button class="catch-btn">CATCH!</button>
+         </div>
       </div>
   </div>
 </div>  `);
@@ -48,26 +51,3 @@ function apiCall(pokemon) {
       console.log(data);
     });
 }
-
-// var search = function () {
-//   const btn = document.getElementById("submit");
-
-//   btn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const pokemon = document.getElementById("search").value;
-
-//     console.log(pokemon);
-//     apiCall(pokemon);
-//   });
-// };
-
-// function apiCall(pokemon) {
-//   // search();
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log(data);
-//     });
-// }

@@ -83,3 +83,19 @@
   border-left: yellow 2px solid;
   border-right: yellow 2px solid;
 }
+
+.catch-btn {
+  padding: 8px;
+  width: 25%;
+  margin: 15px;
+  font-size: 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  outline: none;
+  background: rgba(248, 248, 111, 0.8);
+  border: none;
+}
+
+.catch-btn:hover {
+  background: rgb(150, 229, 231);
+}
