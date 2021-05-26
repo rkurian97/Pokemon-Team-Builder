@@ -1,6 +1,6 @@
 .container h1 {
   font-family: "Architects Daughter", cursive;
-  font-size: 28px;
+  font-size: 35px;
 }
 
 #search-pokemon {
@@ -9,7 +9,6 @@
 
 .searchInput {
   font-size: 14px;
-  color: yellow;
   text-align: center;
   padding: 8px;
   width: 50%;
@@ -27,6 +26,7 @@
   font-size: 13px;
   border: 1px solid black;
   background: rgba(250, 255, 184, 0.767);
+  outline: none;
 }
 
 .container {
@@ -52,9 +52,10 @@
   padding-top: 15px;
 }
 
-/* .heading {
-  border: black 2px solid;
-} */
+.main-heading {
+  font-weight: 900;
+  text-transform: capitalize;
+}
 
 .sub-heading {
   display: flex;
@@ -62,7 +63,6 @@
 }
 
 .sub-heading div {
-  /* border: black 2px solid; */
   flex-basis: 35%;
 }
 

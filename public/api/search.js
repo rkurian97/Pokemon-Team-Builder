@@ -31,7 +31,7 @@ function apiCall(pokemon) {
                  <p class="description">${data.types[0].type.name}</p>
                  <p class="title">Type</p>
              </div>
-             <div>
+             <div class="div-border">
                  <p class="description">${data.weight}hg</p>
                  <p class="title">Weight</p>
              </div>
