@@ -22,14 +22,9 @@
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
-<<<<<<< HEAD
-    "express-session": "^1.17.1",
-    "handlebars": "^4.7.7"
-=======
     "express-session": "^1.17.1"
   },
   "devDependencies": {
     "dotenv": "^10.0.0"
->>>>>>> 3300d3796b61be80db1d8c85e9eba235ddbe827e
   }
 }
