@@ -1,13 +1,23 @@
+<link rel="stylesheet" href="css/search.css">
 <div class="container">
-    <h1>Pokeman Characters</h1>
-    <div id="searchWrapper" class="primary">
-        <input
-        type="text"
-        name="searchBar"
-        id="search for a character" />
+    <h1>Search Pokémon </h1>
+    <div>
+        <div id="search-pokemon">
+            <input id="search" class="searchInput" placeholder="ex. Charmander" /> 
+            <div>
+                <button id="submit"> Search</button>
+            </div>
+        </div>
+
+     <div id="card-container">
+         
+     </div>       
     </div>
-    <ul id="charactersList"></ul>
 </div>
- 
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="api/search.js"></script>
  
   
