@@ -1,0 +1,132 @@
+/* .container {
+    background: rgba(248, 248, 111, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+}
+.card {
+    background:rgb(113, 184, 187);
+    border: 2px solid #e7e7e7;
+    border-radius: 15px;
+    padding: .5rem;
+    width: 300px;
+    height: 300px;
+}
+
+} */
+
+.row {
+    justify-content: center;
+} 
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+    font-family: "Architects Daughter", cursive;
+}
+
+.title {
+    text-align: center;
+} 
+
+.container h1 {
+    font-family: "Architects Daughter", cursive;
+    font-size: 35px;
+}
+  
+#search-pokemon {
+    padding: 20px;
+}
+  
+.searchInput {
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    width: 50%;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid black;
+    background: rgba(250, 255, 184, 0.767);
+}
+  
+#submit {
+    margin: 10px;
+    width: 15%;
+    padding: 6px;
+    border-radius: 15px;
+    font-size: 13px;
+    border: 1px solid black;
+    background: rgba(250, 255, 184, 0.767);
+    outline: none;
+}
+  
+.container {
+    text-align: center;
+}
+  
+#card-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+  
+.card {
+    border-radius: 15px;
+    background: rgb(113, 184, 187);
+    opacity: 0.9;
+    margin: 1em;
+    min-height: 500px;
+}
+  
+.card-img-top {
+    width: 180px;
+    margin: auto;
+    padding-top: 15px;
+}
+  
+.main-heading {
+    font-weight: 900;
+    text-transform: capitalize;
+}
+  
+.sub-heading {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.sub-heading div {
+    flex-basis: 35%;
+}
+  
+.stats {
+    font-weight: normal;
+}
+  
+.description {
+    font-size: 16px;
+}
+  
+.title {
+    font-size: 14px;
+    font-style: italic;
+}
+  
+.div-border {
+    border-left: yellow 2px solid;
+    border-right: yellow 2px solid;
+}
+
+.release-btn {
+    padding: 8px;
+    width: 25%;
+    margin: 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    outline: none;
+    background: rgba(248, 248, 111, 0.8);
+    border: none;
+}
+  
+.release-btn:hover {
+    background: rgb(228, 124, 124);
+}

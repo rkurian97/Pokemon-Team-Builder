@@ -1,39 +1,72 @@
-<script>
-    teamData = [];
+<link rel="stylesheet" href="css/team.css">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 
-fetch("https://pokeapi.co/api/v2/pokemon/charmander/")
-    .then(response => response.json())
-    .then(function (data) {
-        teamData.push(data);
-    });
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form>
+                <p class="heading">Your Team</p>
+                  <div class="form-group">
+            </form>
 
-fetch("https://pokeapi.co/api/v2/pokemon/ditto/")
-    .then(response => response.json())
-    .then(function (data) {
-        teamData.push(data);
-    });
+    <div id="teamContainer" class="row">
 
-fetch("https://pokeapi.co/api/v2/pokemon/lapras/")
-    .then(response => response.json())
-    .then(function (data) {
-        teamData.push(data);
-    });
-fetch("https://pokeapi.co/api/v2/pokemon/lugia/")
-    .then(response => response.json())
-    .then(function (data) {
-        teamData.push(data);
-    });
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu/")
-    .then(response => response.json())
-    .then(function (data) {
-        teamData.push(data);
-    });
-fetch("https://pokeapi.co/api/v2/pokemon/squirtle/")
-    .then(response => response.json())
-    .then(function (data) {
-        teamData.push(data);
-    });
-console.log(teamData);
-</script>
+    </div>
+            
+    {{!-- <div class="row">
+        <div class="column">
+            <div class="card" id="pokemon-one">
+            <h3 class="title">Pokemon 1</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+            </div>
+        </div>
 
-<p>{{{teamNames}}}</p>
+        <div class="column">
+            <div class="card" id="pokemon-two">
+            <h3 class="title">Pokemon 2</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+            </div>
+        </div>
+  
+        <div class="column">
+            <div class="card" id="pokemon-three">
+            <h3 class="title">Pokemon 3</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+            </div>
+        </div>
+  
+        <div class="column">
+            <div class="card" id="pokemon-four">
+            <h3 class="title">Pokemon 4</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" id="pokemon-five">
+            <h3 class="title">Pokemon 5</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" id="pokemon-six">
+            <h3 class="title">Pokemon 6</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+            </div>
+        </div>
+    </div> --}}
+        
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="api/team.js"></script>
