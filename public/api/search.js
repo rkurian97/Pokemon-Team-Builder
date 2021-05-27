@@ -58,3 +58,5 @@ $(document).on("click", "#catchPokemon", function(){
     fetch("/catchPokemon", {method: "POST", headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}, body: JSON.stringify( {name: pokemonName})})
     .then(res=> console.log(res))
 })
+
+

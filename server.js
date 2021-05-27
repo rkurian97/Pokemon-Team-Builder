@@ -141,8 +141,13 @@ app.get("/getTeam", (req, res)=>{
   });
 })
 
-app.delete("/release", (req,res)=> {
-
+app.delete("/release", async (req,res)=> {
+  await Pokemon.destroy({
+    where: {
+      userId: req.user.id,
+      pokemon: req.body.name
+    }
+  })
 });
 // End Routes =============================================================
 
