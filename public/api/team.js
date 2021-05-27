@@ -34,7 +34,7 @@ fetch("/getTeam")
                      </div>
                  </section>
                  <div>
-                     <button class="release-btn">RELEASE</button>
+                     <button class="release-btn" type="button" onclick="releasePokemon('${data.forms[0].name}')" >RELEASE</button>
                  </div>
               </div>
           </div>
@@ -45,3 +45,14 @@ fetch("/getTeam")
             });
         }
     });
+
+    function releasePokemon(name){
+        fetch("/release", {
+            method: "DELETE",
+            headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}, 
+            body: JSON.stringify( {name: name})})
+        .then(res=> {
+            console.log(res)
+        })
+        location.reload()
+    }
