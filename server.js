@@ -30,7 +30,6 @@ require('./config/passport-config')(passport);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const users= [];
 
 // Sets Handlebars as the default template engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -61,8 +60,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/search", isAuthenticated,  (req, res) => {
-  res.render("search", {email: req.user.email});
+app.get("/search", isAuthenticated, (req, res) => {
+  res.render("search");
 });
 
 app.get("/team", isAuthenticated, (req, res) => {
@@ -106,6 +105,15 @@ app.post("/register", async (req, res) =>{
       res.status(401).json(err);
     });
 });
+
+//Add Pokemon to team
+app.post("/catchPokemon", (req, res)=>{
+  console.log(req.user)
+  console.log(req.body.name)
+})
+
+// End Routes =============================================================
+
 
 // check if the user is logged in
 function checkAuthenticated(req, res, next){

@@ -1,20 +1,26 @@
 // Dependencies
 // =============================================================
-// const { Model, DataTypes } = require('sequelize');
-// const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-// class Pokemon extends Model {}
+class Pokemon extends Model { }
 
-// Pokemon.init(
-//   {
-//     pokemon: {
-//       type: DataTypes.STRING,
-//       allowNull: false
-//     }
-//   },
-//   {
-//     sequelize
-//   }
-// );
+Pokemon.init(
+    {
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
+    },
+    {
+        pokemon: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+    },
+    {
+        sequelize
+    }
+);
 
-// module.exports = Pokemon;
+module.exports = Pokemon;
