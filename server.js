@@ -14,6 +14,7 @@ const session = require("express-session");
 const { userInfo } = require("os");
 const sequelize = require('./config/connection');
 const Users = require('./models/Users');
+const Pokemon = require('./models/Pokemon');
 const isAuthenticated = require("./config/middleware/isAuthenticated");
 require('./config/passport-config')(passport);
 
@@ -65,6 +66,8 @@ app.get("/search", isAuthenticated, (req, res) => {
 });
 
 app.get("/team", isAuthenticated, (req, res) => {
+  teamNames=[];
+  console.log(req.user)
   res.render("team");
 });
 
@@ -108,6 +111,17 @@ app.post("/register", async (req, res) =>{
 
 //Add Pokemon to team
 app.post("/catchPokemon", (req, res)=>{
+  Pokemon.create({
+    userId: req.user.id,
+    pokemon: req.body.name
+  })
+    .then(function() {
+      res.redirect("/search");
+    })
+    .catch(function(err) {
+      console.log(err)
+      res.status(401).json(err);
+    });
   console.log(req.user)
   console.log(req.body.name)
 })

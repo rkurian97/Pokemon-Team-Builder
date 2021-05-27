@@ -9,13 +9,13 @@ Pokemon.init(
     {
         userId: {
             type: DataTypes.INTEGER,
-            allowNull: false
-        }
-    },
-    {
+            allowNull: false,
+            primaryKey: true
+        },
         pokemon: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            primaryKey: true
         }
     },
     {
