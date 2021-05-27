@@ -136,7 +136,7 @@ app.get("/getTeam", (req, res)=>{
   })
   .then(data=> {
       data.map(result=> teamNames.push(result.dataValues.pokemon));
-      console.log(teamNames)
+      console.log(teamNames);
       res.send({teamNames});
   });
 })
