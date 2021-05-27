@@ -5,7 +5,7 @@ function test() {
 test();
 
 $("#submit").on("click", function () {
-  var pokemon = $("#search").val();
+  var pokemon = $("#search").val().toLowerCase();
 
   console.log(pokemon);
   apiCall(pokemon);
@@ -23,7 +23,7 @@ function apiCall(pokemon) {
       <img class="card-img-top" src="${data.sprites.other.dream_world.front_default}" alt="Card image cap">
       <div class="card-body">
           <section class="heading">
-              <h1 class="main-heading">${data.forms[0].name}</h1>
+              <h1 id="pokemonName" class="main-heading">${data.forms[0].name}</h1>
               <p class="stats">HP ${data.stats[0].base_stat} | XP ${data.base_experience}</p>
           </section>
          <section class="sub-heading">
@@ -41,13 +41,23 @@ function apiCall(pokemon) {
              </div>
          </section>
          <div>
-             <button class="catch-btn">CATCH!</button>
+             <button class="catch-btn" id="catchPokemon">CATCH!</button>
          </div>
       </div>
   </div>
 </div>  `);
-
+      $("#card-container").html("");
       $("#card-container").append(card);
       console.log(data);
     });
 }
+
+$(document).on("click", "#catchPokemon", function () {
+  const pokemonName = $("#pokemonName").text();
+  console.log(pokemonName);
+  fetch("/catchPokemon", {
+    method: "POST",
+    headers: { Accept: "application/json", "Content-Type": "application/json" },
+    body: JSON.stringify({ name: pokemonName }),
+  }).then((res) => console.log(res));
+});

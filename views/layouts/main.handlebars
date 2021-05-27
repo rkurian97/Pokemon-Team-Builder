@@ -18,7 +18,7 @@
 	<title>Pokémon Team Builder</title>
     <style>
         body {
-          background-image: url('https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png');
+          background-image: url('/images/pokemon-in-the-wild.png');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: 100% 100%;
@@ -28,11 +28,6 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="/login">login</a>
-    </nav>
-  </header>
 		 <nav class="navbar navbar-expand-lg">
            <li class="nav-item">
             <a class="nav-link" href="/">H O M E</a>
@@ -44,7 +39,7 @@
             <a class="nav-link" href="/search">S E A R C H</a>
           </li>
         </ul>
-              <img src="Pokemon-logo.png" class="logo" alt="">
+              <img src="/images/pokemon-logo.png" class="logo" alt="">
 
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -56,6 +51,10 @@
             <a href="/login" class="user-connect"
               ><span class="glyphicon glyphicon-log-in"></span> L o g i n</a
             >
+          </li>
+          <li>
+            <a href="/logout" class="user-connect">
+            <span class="glyphicon glyphicon-log-in"></span> L o g o u t</a>
           </li>
         </ul>
       </div>
