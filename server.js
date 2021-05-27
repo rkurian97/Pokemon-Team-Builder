@@ -61,8 +61,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/search", isAuthenticated, (req, res) => {
-  const name="lugia"
-  res.render("search", {name});
+
+  res.render("search");
 });
 
 app.get("/team", isAuthenticated, (req, res) => {
@@ -72,7 +72,9 @@ app.get("/team", isAuthenticated, (req, res) => {
 
 //login
 app.get("/login", (req, res) => {
-  res.render("login");
+  message=req.flash('error')
+  console.log(message)
+  res.render("login", {message} );
 });
 
 app.post('/login', passport.authenticate('local', {
