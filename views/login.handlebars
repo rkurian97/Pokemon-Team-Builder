@@ -3,6 +3,9 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            {{#if message}}
+                <div class="alert alert-danger heading">{{message}}</div>
+            {{/if}}
             <form action="/login" method="POST">
                 <p class="heading">Login</p>
                   <div class="form-group">

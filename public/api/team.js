@@ -1,4 +1,3 @@
-// teamNames = ["charmander", "ditto", 'lapras', "lugia", "pikachu", "squirtle"];
 teamData = []
 
 fetch("/getTeam")
@@ -46,13 +45,13 @@ fetch("/getTeam")
         }
     });
 
-    function releasePokemon(name){
-        fetch("/release", {
-            method: "DELETE",
-            headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}, 
-            body: JSON.stringify( {name: name})})
-        .then(res=> {
-            console.log(res)
-        })
-        location.reload()
-    }
+function releasePokemon(name){
+    fetch("/release", {
+        method: "DELETE",
+        headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}, 
+        body: JSON.stringify( {name: name})})
+    .then(res=> {
+        console.log(res)
+    })
+    location.reload()
+}
