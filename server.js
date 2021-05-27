@@ -18,14 +18,6 @@ const Pokemon = require('./models/Pokemon');
 const isAuthenticated = require("./config/middleware/isAuthenticated");
 require('./config/passport-config')(passport);
 
-// const initializePassport= require(".config/passport-config")
-// initializePassport(
-//   passport,
-//   email=> users.find(user=> user.email === email),
-//   id=> users.find(user=> user.id === id)
-// );
-
-
 // Sets up the Express App
 // =============================================================
 const app = express();
@@ -73,7 +65,6 @@ app.get("/team", isAuthenticated, (req, res) => {
 //login
 app.get("/login", (req, res) => {
   message=req.flash('error')
-  console.log(message)
   res.render("login", {message} );
 });
 
@@ -123,8 +114,6 @@ app.post("/catchPokemon", (req, res)=>{
       console.log(err)
       res.status(401).json(err);
     });
-  console.log(req.user)
-  console.log(req.body.name)
 })
 
 //Get Pokemon Team
@@ -137,7 +126,6 @@ app.get("/getTeam", (req, res)=>{
   })
   .then(data=> {
       data.map(result=> teamNames.push(result.dataValues.pokemon));
-      console.log(teamNames);
       res.send({teamNames});
   });
 })
