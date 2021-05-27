@@ -57,9 +57,4 @@ $(document).on("click", "#catchPokemon", function(){
     console.log(pokemonName)
     fetch("/catchPokemon", {method: "POST", headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}, body: JSON.stringify( {name: pokemonName})})
     .then(res=> console.log(res))
-    // axios.post('/catchPokemon',{
-    //   data: {name: pokemonName}
-    // })
-    // .then(res=> console.log(res))
 })
-

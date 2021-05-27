@@ -62,12 +62,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/search", isAuthenticated, (req, res) => {
-  res.render("search");
+  const name="lugia"
+  res.render("search", {name});
 });
 
 app.get("/team", isAuthenticated, (req, res) => {
-  teamNames=[];
-  console.log(req.user)
+
   res.render("team");
 });
 
@@ -126,6 +126,24 @@ app.post("/catchPokemon", (req, res)=>{
   console.log(req.body.name)
 })
 
+//Get Pokemon Team
+app.get("/getTeam", (req, res)=>{
+  teamNames=[];
+  Pokemon.findAll({
+    where: {
+      userId: req.user.id
+    }
+  })
+  .then(data=> {
+      data.map(result=> teamNames.push(result.dataValues.pokemon));
+      console.log(teamNames)
+      res.send({teamNames});
+  });
+})
+
+app.delete("/release", (req,res)=> {
+
+});
 // End Routes =============================================================
 
 
