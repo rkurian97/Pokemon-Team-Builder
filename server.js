@@ -52,12 +52,12 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/search", isAuthenticated, (req, res) => {
+app.get("/search", (req, res) => {
 
   res.render("search");
 });
 
-app.get("/team", isAuthenticated, (req, res) => {
+app.get("/team", (req, res) => {
 
   res.render("team");
 });
