@@ -19,14 +19,23 @@ module.exports=(passport) => {
           email: email
         }
       }).then(function(dbUser) {
-        // If there's no user with the given email
+        // checking to see if the password and eamil meet the requirements
+        // console.log (/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(email))
+        //   if (/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(email)) {
+        //     return done(null, false, {
+        //       message: "In correct format."
+        //     });
+        //   }
+
+        // If thesre's no user with the given email
         if (!dbUser) {
           return done(null, false, {
             message: "No account with that email."
           });
         }
         // If there is a user with the given email, but the password the user gives us is incorrect
-        else if (!dbUser.validPassword(password)) {
+        // console.log ()
+        if (!dbUser.validPassword(password)) {
           return done(null, false, {
             message: "Incorrect password."
           });
@@ -36,7 +45,6 @@ module.exports=(passport) => {
       });
     }
   ));
-
   // In order to help keep authentication state across HTTP requests,
   // Sequelize needs to serialize and deserialize the user
   // Just consider this part boilerplate needed to make it all work
