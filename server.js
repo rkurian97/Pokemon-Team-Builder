@@ -52,12 +52,12 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/search", (req, res) => {
+app.get("/search", isAuthenticated, (req, res) => {
 
   res.render("search");
 });
 
-app.get("/team", (req, res) => {
+app.get("/team", isAuthenticated,  (req, res) => {
 
   res.render("team");
 });
@@ -139,16 +139,6 @@ app.delete("/release", async (req,res)=> {
   })
 });
 // End Routes =============================================================
-
-
-// check if the user is logged in
-function checkAuthenticated(req, res, next){
-  if (req.isAuthenticated()) {
-    return next()
-  }
-
-  res.redirect('/login')
-}
 
 // Starts the server to begin listening
 // =============================================================
