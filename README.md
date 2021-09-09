@@ -6,6 +6,9 @@ The Pokemon Team Builder application has been created for fans of Pokemon, and a
 
 This application has been created by: Andrea Poklar, Anderson Buzzi, Keith Smart and Rohith Kurian.
 
+## Live Link
+https://bc-project-2.herokuapp.com/
+
 ## Usage
 
 Below are screenshots of some of the features for reference.
